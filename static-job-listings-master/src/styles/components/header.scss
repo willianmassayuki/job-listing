@@ -2,7 +2,13 @@
 
 .header {
     background-color: variables.$primary-color;
-    img {
-        width: 100%;
-    }
+    background-image: url("bg-header-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 768px) {
+        background-image: url("bg-header-desktop.svg");
+      }
 }

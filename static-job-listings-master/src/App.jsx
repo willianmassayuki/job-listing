@@ -1,12 +1,24 @@
 import Header from './components/Header';
+import List from './components/List';
 import './styles/app.scss';
 
 function App() {
    return (
     <>
-    <div class="body">
+    <div className="body">
       <Header/>
-      <p>Este paragrafo tem a fonte correta</p>
+      <div>
+      <List
+        title="Título do Card"
+        description="Descrição do Card"
+        imageUrl="/static-job-listings-master/src/images/loop-studios.svg"
+      />
+      <List
+        title="Título do Card"
+        description="Descrição do Card"
+        imageUrl="caminho-da-imagem.jpg"
+      />
+    </div>
 
       {/*
       <p>
@@ -180,14 +192,15 @@ function App() {
       Sass
       <!-- Item End -->
       </p>
-    */}
-      
-    </div>
+
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </div>
 
+    */}
+      
+    </div>
     </>
   )
 }

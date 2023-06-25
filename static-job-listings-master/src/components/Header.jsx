@@ -1,11 +1,9 @@
 import '../styles/components/header.scss';
-import Background from '../images/bg-header-desktop.svg'
+import Background from '../images/bg-header-desktop.svg';
 
 const Header = () => {
   return (
-    <div class="header">
-        <img src={Background} alt="Background" />    
-    </div>
+    <div className="header"></div>
   )
 }
 
