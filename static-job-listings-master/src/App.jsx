@@ -1,12 +1,12 @@
+import Header from './components/Header';
 import './styles/app.scss';
 
 function App() {
    return (
     <>
-    <div>
-      <h1>Iniciando no React e SASS</h1>
-      
-
+    <div class="body">
+      <Header/>
+      <p>Este paragrafo tem a fonte correta</p>
 
       {/*
       <p>

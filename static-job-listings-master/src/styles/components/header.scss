@@ -1,0 +1,8 @@
+@use '../variables';
+
+.header {
+    background-color: variables.$primary-color;
+    img {
+        width: 100%;
+    }
+}
