@@ -1,5 +1,4 @@
 import '../styles/components/header.scss';
-import Background from '../images/bg-header-desktop.svg';
 
 const Header = () => {
   return (

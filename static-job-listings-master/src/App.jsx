@@ -1,23 +1,16 @@
 import Header from './components/Header';
 import List from './components/List';
+import Busca from './components/Busca';
 import './styles/app.scss';
 
 function App() {
    return (
     <>
     <div className="body">
-      <Header/>
+      <Header />
       <div>
-      <List
-        title="Título do Card"
-        description="Descrição do Card"
-        imageUrl="/static-job-listings-master/src/images/loop-studios.svg"
-      />
-      <List
-        title="Título do Card"
-        description="Descrição do Card"
-        imageUrl="caminho-da-imagem.jpg"
-      />
+      <Busca />
+      
     </div>
 
       {/*
