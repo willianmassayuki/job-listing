@@ -10,6 +10,16 @@
 .body {
     font-family: variables.$font-stack, sans-serif;
     font-size: variables.$body-font-size;
+    display: flex;
+    flex-direction: column;
+}
+
+.filtro-container {
+    position: absolute;
+    width: 80%;
+    top: 120px;
+    align-self: center;
+    box-shadow: 10px 20px 30px -30px variables.$primary-color;
 }
 
 .attribution { 

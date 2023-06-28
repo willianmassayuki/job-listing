@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import List from './components/List';
 import Busca from './components/Busca';
+import Filtro from './components/Filtro';
 import './styles/app.scss';
 
 function App() {
@@ -8,9 +9,11 @@ function App() {
     <>
     <div className="body">
       <Header />
+      <div className="filtro-container">
+        <Filtro />
+      </div>
       <div>
-      <Busca />
-      
+        <Busca />
       </div>
 
       {/*

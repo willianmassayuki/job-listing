@@ -12,11 +12,10 @@ const App = () => {
     })
 })
 
-const [selectedTerms, setSelectedTerms] = useState([]);
-
   return (
-    <div className='jobs-container'>
+     <div className='jobs-container'>
       {data.map((item) => (
+        
         <div className={`card-container ${item.featured ? 'featured' : ''}`} key={item.id}>
           <img className='card-logo' src={item.logo} alt="Logo" />
           <div className='card-information'>
@@ -39,17 +38,21 @@ const [selectedTerms, setSelectedTerms] = useState([]);
                  <a className="tools" href="">{dado}</a>
               ))*/}
               {item.languages.map(dado => (
-                <a key={dado} className="languages" href=""  onClick={() => setSelectedTerms((prevState) => [...prevState, dado])}>{dado}</a>
+                <button key={dado} className="languages" value={dado}>{dado}</button>
               ))}
               {item.tools.map(dado => (
-                <a key={dado} className="tools" href=""  onClick={() => setSelectedTerms((prevState) => [...prevState, dado])}>{dado}</a>
+                <a key={dado} className="tools" href="">{dado}</a>
               ))}
             
           </div> 
         </div>
+             
       ))}
     </div>
+
   );
+
 };
+
 
 export default App;
