@@ -12,6 +12,9 @@
     align-items: center;
     width: 80%;
     height: 120px;
+    border-radius: 5px;
+    box-sizing: content-box;
+    box-shadow: 10px 20px 30px -30px variables.$primary-color;
     background-color: variables.$card-bg-color;
     @media screen and (max-width: variables.$mobile-size){
         flex-direction: column;
@@ -100,3 +103,6 @@
     }
 }
 
+.featured {
+    border-left: 4px variables.$primary-color solid;
+}
