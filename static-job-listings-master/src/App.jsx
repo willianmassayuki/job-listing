@@ -11,7 +11,7 @@ function App() {
       <div>
       <Busca />
       
-    </div>
+      </div>
 
       {/*
       <p>

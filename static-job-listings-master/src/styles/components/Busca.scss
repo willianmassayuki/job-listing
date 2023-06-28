@@ -1,0 +1,102 @@
+@use '../variables';
+@use '../mixins';
+
+.jobs-container {
+    margin-bottom: 50px;
+}
+
+.card-container {
+    position: relative;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 120px;
+    background-color: variables.$card-bg-color;
+    @media screen and (max-width: variables.$mobile-size){
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 10px 10px 10px;
+        margin: 0 auto 30px auto;
+        position: relative;
+        height: auto;
+    }
+
+    .card-logo {
+        margin: auto 10px auto 20px;
+        width: 60px;
+        @media screen and (max-width: variables.$mobile-size){
+            position: absolute;
+            top: -20px;
+            left: 5px;
+            width: 40px;
+        }
+    }
+
+    .card-information {
+        @media screen and (max-width: variables.$mobile-size){
+            padding: 5px;
+        }
+
+        .first-row {
+            margin: 0 auto 10px 0;
+            .company {
+                color: variables.$primary-color;
+                display: inline;
+            }
+
+            .badge-new {
+                @include mixins.badge(variables.$primary-color);
+                margin-left: 20px;
+            }
+
+            .badge-featured {
+                @include mixins.badge(variables.$tertiary-color);
+                margin: 0 10px;
+            }
+        }
+
+        .position {
+            display: block;
+            text-decoration-line: none;
+            color: variables.$tertiary-color;
+            margin: 0 auto 10px 0;
+            font-size: 1.3rem;
+            white-space: nowrap;
+            @media screen and (max-width: variables.$mobile-size){
+                font-size: 1rem;
+            }
+        }
+
+        .description {
+            color: variables.$secondary-color;
+        }
+    }
+
+    .card-competences {
+        margin: auto 20px auto auto;
+        display: flex;
+        flex-flow: wrap;
+        @media screen and (max-width: variables.$mobile-size){
+            margin-top: 10px;
+            padding-top: 10px;
+            display: flex;
+            flex-flow: wrap;
+            border-top: 1px gray solid;
+            width: 100%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: variables.$primary-color;
+            margin-left: 10px;
+            background-color: variables.$filter-tablets-color;
+            padding: 5px;
+            margin: 5px;
+            @media screen and (max-width: variables.$mobile-size){
+                margin: 5px;
+            }
+        }
+    }
+}
+

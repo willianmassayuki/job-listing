@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/components/busca.scss';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -12,31 +13,35 @@ const App = () => {
 })
 
   return (
-    <div>
-      {data.map(item => (
+    <div className='jobs-container'>
+      {data.map((item) => (
         <div className='card-container' key={item.id}>
           <img className='card-logo' src={item.logo} alt="Logo" />
           <div className='card-information'>
-            <p className='company'>{item.company}</p>     
+            <div className='first-row'>
+            <p className='company'>{item.company}</p>   
+              {item.new ? <a href="" className="badge-new">NEW!</a> : null}
+              {item.featured ? <a href="" className="badge-featured">FEATURED</a> : null}
+            </div>
             <a className='position' href='#'>{item.position}</a>
-            <p className='description'>{item.postedAt + " • " + item.contract + " • " + item.location}</p>
+            <p className='description'>{item.postedAt + "  •  " + item.contract + "  •  " + item.location}</p>
           </div>
           <div className="card-competences">
-            <ul>
-              <li><a href="#" className="tags">{item.role}</a></li>
-              <li><a href="#" className="tags">{item.level}</a></li>
+            
+              <a href="#" className="tags">{item.role}</a>
+              <a href="#" className="tags">{item.level}</a>
               {item.languages.map(dado => (
-                <li className="languages"><a href="">{dado}</a></li>
+                <a className="languages" href="">{dado}</a>
               ))}
               {item.tools.map(dado => (
-                <li className="tools"><a href="">{dado}</a></li>
+                 <a className="tools" href="">{dado}</a>
               ))}
-            </ul> 
-          </div>
-          
+            
+          </div> 
         </div>
       ))}
     </div>
+
   );
 };
 
