@@ -2,7 +2,65 @@
 @use '../mixins';
 
 .jobs-container {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
+    .filtro-container {
+        position: absolute;
+        width: 80%;
+        top: 120px;
+        align-self: center;
+        box-shadow: 10px 20px 30px -30px variables.$primary-color;
+        
+        .selected-terms {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            box-sizing: content-box;
+            background-color: variables.$card-bg-color;
+            
+            p {
+                display: inline;
+                color: variables.$primary-color;
+                background-color: variables.$filter-tablets-color;
+                padding: 5px;
+                margin: 5px 0 5px 15px;
+            }
+
+            button {
+                cursor: pointer;
+                color: variables.$card-bg-color;
+                margin-left: 10px;
+                background-color: variables.$primary-color;
+                padding: 5px;
+                margin: 0;
+                border: none;
+                font-family: inherit;
+                font-size: inherit;
+
+                &:hover {
+                    background-color: variables.$tertiary-color;
+                }
+            }
+
+            .clear-terms-button {
+                position: absolute;
+                right: 20px;
+                background-color: transparent;
+                color: variables.$primary-color;
+                text-underline-offset: 3px;
+
+                &:hover {
+                    text-decoration: underline;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    
 }
 
 .card-container {
@@ -11,7 +69,7 @@
     display: flex;
     align-items: center;
     width: 80%;
-    height: 120px;
+    height: 125px;
     border-radius: 5px;
     box-sizing: content-box;
     box-shadow: 10px 20px 30px -30px variables.$primary-color;
@@ -89,16 +147,22 @@
             width: 100%;
         }
         
-        a {
-            text-decoration: none;
+        button {
+            cursor: pointer;
             color: variables.$primary-color;
             margin-left: 10px;
             background-color: variables.$filter-tablets-color;
             padding: 5px;
             margin: 5px;
-            @media screen and (max-width: variables.$mobile-size){
-                margin: 5px;
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            
+            &:hover {
+                background-color: variables.$primary-color;
+                color: variables.$card-bg-color;
             }
+            
         }
     }
 }

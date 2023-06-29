@@ -1,5 +1,4 @@
 import Header from './components/Header';
-import List from './components/List';
 import Busca from './components/Busca';
 import Filtro from './components/Filtro';
 import './styles/app.scss';
