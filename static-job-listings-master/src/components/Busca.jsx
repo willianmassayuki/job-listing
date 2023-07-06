@@ -6,7 +6,7 @@ const App = () => {
   const [selectedTerms, setSelectedTerms] = useState([]);
 
   useEffect(() => {
-    fetch('data.json')
+    fetch('/data.json')
       .then((response) =>
         response
           .json()
