@@ -1,4 +1,4 @@
-# Job listings with filtering
+# Job listing with filtering
 
 ![Design preview for the Job listings with filtering coding challenge](./design/Screenshots/desktop2.png)
 
